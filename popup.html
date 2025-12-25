@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            width: 250px;
+            padding: 15px;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+        
+        /* NEW: Container to align Icon and Text side-by-side */
+        .header-row {
+            display: flex;
+            align-items: center; /* Vertically centers the text with the icon */
+            gap: 10px;           /* Space between icon and text */
+            margin-bottom: 15px;
+        }
+
+        /* NEW: Style for the logo */
+        .header-logo {
+            width: 32px;  /* Scaled down to fit the 250px popup layout */
+            height: 32px;
+            object-fit: contain;
+        }
+
+        /* UPDATED: Removed default margins so it aligns with the icon */
+        h2 { 
+            margin: 0; 
+            font-size: 1.3rem; 
+        }
+
+        h3 { margin-top: 0; margin-bottom: 15px; font-size: 1.1rem; }
+
+        .form-group { margin-bottom: 12px; }
+
+        label {
+            display: block;
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; 
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-bottom: 10px;
+            transition: opacity 0.2s;
+        }
+
+        button:hover { opacity: 0.9; }
+
+        .btn-primary { background-color: #3b82f6; color: white; }
+        .btn-secondary { background-color: #e2e8f0; color: #333; }
+
+        hr { border: 0; border-top: 1px solid #ddd; margin: 15px 0; }
+        
+        /* Footer Styles */
+        .footer-links {
+            margin-top: 15px;
+            font-size: 0.8rem;
+            text-align: center;
+            color: #666;
+        }
+        .heart { color: #e25555; }
+        .donate-link {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .donate-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <div class="header-row">
+        <img src="128 Search Center Logo.png" alt="Logo" class="header-logo">
+        <h2>Search Center</h2>
+    </div>
+
+    <div class="form-group">
+        <label for="search-query">Search Term</label>
+        <input type="text" id="search-query" placeholder="Search Center">
+    </div>
+
+    <div class="form-group">
+        <label for="folder-select">Select Folder</label>
+        <select id="folder-select">
+            <option value="" disabled selected>Loading folders...</option>
+        </select>
+    </div>
+
+    <button id="run-search" class="btn-primary">Search All</button>
+
+    <button id="open-manager" class="btn-secondary">Manage Folders</button>
+    
+    <hr>
+        
+    <div class="footer-links">
+        <p>Open Source <span class="heart">♥</span> Project</p>
+        <a href="https://buymeacoffee.com/onefeetlong" target="_blank" class="donate-link">Buy Developer a Coffee</a>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

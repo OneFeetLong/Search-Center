@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Search Center Manager",
+  "author": "OneFeetLong",
+  "version": "1.1",
+  "description": "Manage your custom search engines and folders.",
+  "icons": {
+	  "64": "64 Search Center Logo.png",
+	  "128": "128 Search Center Logo.png"
+  },
+  "permissions": [
+    "storage",
+    "contextMenus"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Open Search Manager"
+  }
+}

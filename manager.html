@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Center</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="brand">
+            <h1>Folders</h1>
+			<p>Open Source <span class="heart">♥</span> Project</p>
+			<a href="https://buymeacoffee.com/onefeetlong" target="_blank" class="donate-link">Buy Developer a Coffee</a>
+        </div>
+        <div class="controls">
+            <button id="add-folder" class="btn primary">New Folder</button>
+            <button id="open-modal" class="btn secondary">Add Engine</button>
+        </div>
+    </header>
+
+    <main id="manager-container">
+        </main>
+
+    <div id="engine-modal" class="modal">
+        <div class="modal-content">
+            <h3>Add Search Engine</h3>
+            
+            <input type="text" id="engine-label" placeholder="Name (e.g., Google)">
+            <input type="text" id="engine-url" placeholder="URL (e.g., https://google.com/search?q=)">
+            <input type="text" id="engine-icon" placeholder="Icon URL (Optional)">
+            
+            <div id="folder-selector-container" style="margin: 15px 0;">
+                <p style="margin-bottom: 5px; font-weight: bold; font-size: 0.9em;">Select Folder(s):</p>
+                <div id="folder-choice-grid" style="display: flex; gap: 5px; flex-wrap: wrap;">
+                    </div>
+            </div>
+
+            <div class="modal-actions">
+                <button id="close-modal" class="btn">Cancel</button>
+                <button id="save-engine" class="btn primary">Add Engine</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="manager.js"></script>
+</body>
+</html>
